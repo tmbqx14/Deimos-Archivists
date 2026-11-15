@@ -50,7 +50,7 @@ const D = {
 			},
 			{
 				n: 'Laser Retroreflective Arrays',
-				e: '<img src="images/Laser%20retroreflector.JPG" alt="Laser retroreflective array">',
+				e: '<img src="images/LaserRetroreflector.JPG" alt="Laser retroreflective array">',
 				story: 'Laser Retroreflective Arrays (1969): Discover how a tiny device left on the Moon helps us measure the distance between Earth and the Moon!',
 				info: [
 					'These small, lightweight devices are used to reflect laser light, providing precise scaling of the distance between the earth and the moon.',
