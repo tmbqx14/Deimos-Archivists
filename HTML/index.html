@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Space Adventure</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<button class="menu-icon" onclick="document.getElementById('dd').classList.toggle('open')">☰</button>
+	<button class="back" onclick="goBack()">←</button>
+
+<!--dropdown menu-->
+	<div class="dropdown" id="dd">
+		<a onclick="go('home')">Home</a>
+		<a onclick="explore('moon')">Explore Moon</a>
+		<a onclick="explore('mars')">Explore Mars</a>
+		<a onclick="go('extra')">Extra information</a>
+	</div>
+
+
+<!--Home page-->
+	<div class="screen on" id="home">
+		<div class="sys">
+			<div class="sun"></div>
+			<div class="orbit o1">
+				<span>
+					<span class="ball earth-pic">
+						<span class="moon-ring">
+							<span class="ball moon-pic" style="--s:4vmin"></span>
+						</span>
+					</span>
+				</span>
+			</div>
+			<div class="orbit o2">
+				<span><span class="ball mars-pic" style="--s:7vmin"></span></span>
+			</div>
+		</div>
+		<div class="titles">
+			<h1>Space<br><span>Adventure</span></h1>
+			<p>Space enthusiasts! Welcome to the galaxy. Do you want to know what it is like as an astronaut? There are many forgotten things that are left on these planets… Let’s find out what they are.</p>
+			<div class="row">
+				<button class="btn" onclick="go('choose')">Begin your adventure</button>
+				<img class="astro" src="images/Astronaut.png" alt="Astronaut">
+			</div>
+		</div>
+	</div>
+
+
+<!--Choose your destination-->
+	<div class="screen" id="choose">
+		<div class="page center">
+			<h1><span>Welcome Astronaut!</span></h1>
+			<div class="bubble"><span>Where should I land? The Moon or Mars?</span></div>
+			<img class="ship" src="images/astronautship.png" alt="Spaceship">
+		</div>
+		<div class="world">
+			<div class="big">
+				<span class="ball moon-pic" style="--s:30vmin"></span>
+				<button class="btn" onclick="explore('moon')">Explore the Moon</button>
+			</div>
+		</div>
+		<div class="world">
+			<div class="big">
+				<span class="ball mars-pic" style="--s:30vmin"></span>
+				<button class="btn" onclick="explore('mars')">Explore Mars</button>
+			</div>
+		</div>
+	</div>
+
+
+<!--Selection equipment(mars&moon)-->
+	<div class="screen" id="sel">
+		<span class="topleft" onclick="go('end')">Go back to Earth</span>
+		<span class="topright" id="trv"></span>
+		<div class="planet"></div>
+		<div class="stage" id="st"></div>
+		<div class="ground">
+			<img class="guy" src="images/Astronaut.png" alt="Astronaut">
+			<div class="bubble speech" id="sp"></div>
+		</div>
+		<button class="next btn" id="nx" onclick="story(0)">Next</button>
+	</div>
+
+
+<!--Storyboxes-->
+	<div class="screen" id="story">
+		<div class="page" id="storybox"></div>
+	</div>
+
+
+<!--End-->
+	<div class="screen" id="end">
+		<div class="page center" style="padding-top:20vh">
+			<h1>Your journey is over!<span><br>Come again next time!</span></h1>
+		</div>
+		<div class="center">
+			<img class="astro" src="images/Astronaut.png" alt="Astronaut">
+		</div>
+		<button class="btn" onclick="hist=[];go('home')">Start again</button>
+	</div>
+
+
+<!--Extra info-->
+	<div class="screen" id="extra">
+		<div class="page"><h1>Extra<span>Information</span></h1>
+			<div class="infobox">Inspiration<br>Every space mission leaves something behind, from rovers and flags to tiny mirrors. We wanted to turn these forgotten objects into stories for young explorers.</div>
+			<div class="infobox">Credits<br>Web-development and project management by Aishah Bint-Anwar<br>Illustrations and storytelling by Simra Rahman</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
